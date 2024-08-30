@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>currency converter</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <!-- for exchange icon -->
+
+</head>
+<body>
+   
+    <form >
+        <section class="container">
+        <section class="header">
+            <h1>Currency converter</h1>
+        </section>
+    <section class="input">
+        <p>Enter Amount</p>
+     <input value="" type="text">
+    </section>
+    <section class="dropdown">
+        <div class="from">
+            <p>From</p>
+            <div class="selectContainer">
+                <img src="https://flagsapi.com/US/shiny/64.png">
+                <select name="from">
+                  
+                </select>
+            </div>
+        </div>
+       
+            <i class="fa-solid fa-right-left"></i>
+
+        <div class="to">
+            <p>To</p>
+            <div class="selectContainer">
+                <img src="https://flagsapi.com/IN/shiny/64.png">
+                <select name="to">
+                   
+                </select>
+            </div>
+        </div>
+    </section>
+    <section class="msg">
+        <h5></h5>
+        
+    </section>
+    <button>Get Exchange Rate</button>
+</section>
+</form>
+</body>
+<script src="code.js"></script>
+<script type="module" src="jscript.js"></script>
+<!-- code.js should be before the jscript.js as it needs to access code.js before -->
+</html>
