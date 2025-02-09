@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     margin: 0;
     min-height: 100vh;
@@ -33,8 +34,12 @@ main form {
     justify-content: space-between;
     border-radius: 30px;
     height: max-content;
+    width: 100%;
+    max-width: 100%;
+    padding: 5px;
 }
 
+/* Input & Button */
 main form input,
 main form button {
     border: none;
@@ -43,8 +48,15 @@ main form button {
     padding: 10px;
 }
 
+/* Input Field */
 main form input {
-    width: 80%;
+    width: 100%;
+    flex: 1;
+}
+
+/* Icon */
+main form i {
+    opacity: 0.8;
 }
 
 /* Result & Temperature Display */
@@ -119,6 +131,7 @@ main .temp p {
 main li:nth-child(2) {
     background-color: #b56291;
 }
+
 main li:nth-child(3) {
     background-color: #48567b;
 }
@@ -149,6 +162,10 @@ main.error {
         width: 95%;
     }
 
+    main form {
+        width: 100%;
+    }
+
     main form input {
         width: 75%;
     }
@@ -176,9 +193,18 @@ main.error {
         padding: 15px;
     }
 
+    main form {
+        flex-direction: row;
+        width: 100%;
+    }
+
     main form input {
-        width: 70%;
+        width: 80%;
         padding: 8px;
+    }
+
+    main form button {
+        width: 20%;
     }
 
     main .temp,
@@ -198,3 +224,4 @@ main.error {
         font-size: 18px;
     }
 }
+
