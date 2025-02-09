@@ -1,227 +1,240 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(to bottom, #dcdcdc 50%, #e9e9e9 50%);
-    font-family: sans-serif;
-    padding: 20px;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom, #dcdcdc 50%, #e9e9e9 50%);
+  font-family: sans-serif;
+  padding: 20px;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
 /* Main Container */
 main {
-    width: 90%;
-    max-width: 400px;
-    background-color: white;
-    border-radius: 20px;
-    display: grid;
-    justify-content: center;
-    box-shadow: 0 30px 50px #5553;
-    padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  background-color: white;
+  border-radius: 20px;
+  display: grid;
+  justify-content: center;
+  box-shadow: 0 30px 50px #5553;
+  padding: 20px;
 }
 
 /* Form Styling */
 main form {
-    border: 1px solid #5553;
-    display: flex;
-    justify-content: space-between;
-    border-radius: 30px;
-    height: max-content;
-    width: 100%;
-    max-width: 100%;
-    padding: 5px;
+  border: 1px solid #5553;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 30px;
+  height: max-content;
+  width: 100%;
+  max-width: 100%;
+  padding: 5px;
 }
 
 /* Input & Button */
 main form input,
 main form button {
-    border: none;
-    background-color: transparent;
-    outline: none;
-    padding: 10px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  padding: 10px;
 }
 
 /* Input Field */
 main form input {
-    width: 100%;
-    flex: 1;
+  width: 100%;
+  flex: 1;
 }
 
 /* Icon */
 main form i {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 /* Result & Temperature Display */
 main .result,
 main .temperature {
-    padding-top: 20px;
-    text-align: center;
+  padding-top: 20px;
+  text-align: center;
 }
 
 .temperature img {
-    filter: drop-shadow(0 10px 50px #000);
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+  filter: drop-shadow(0 10px 50px #000);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* Temperature & Result Styling */
 main .temperature,
 main .result {
-    font-weight: bold;
-    font-size: large;
-    display: grid;
-    justify-content: center;
-    align-items: center;
+  font-weight: bold;
+  font-size: large;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 
 main .result {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 main .temp,
 main sup {
-    font-size: 3rem;
-    padding-top: 10px;
+  font-size: 3rem;
+  padding-top: 10px;
 }
 
 main .description .temp {
-    padding: 5px 0 80px;
+  padding: 5px 0 80px;
 }
 
 /* Weather Data Cards */
 main ul {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 10px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
 }
 
 main li {
-    background-color: #f78a55;
-    color: #fff;
-    border-radius: 10px;
-    padding: 10px 15px;
-    text-align: center;
-    background-image: linear-gradient(to bottom, transparent 50%, #0003 50%);
+  background-color: #f78a55;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 15px;
+  text-align: center;
+  background-image: linear-gradient(to bottom, transparent 50%, #0003 50%);
 }
 
 main li i {
-    font-size: 2.5rem;
-    padding-top: 10px;
-    margin-bottom: 10px;
+  font-size: 2.5rem;
+  padding-top: 10px;
+  margin-bottom: 10px;
 }
 
 main .temp p {
-    font-size: 22px;
+  font-size: 22px;
 }
 
 /* Different Card Colors */
 main li:nth-child(2) {
-    background-color: #b56291;
+  background-color: #b56291;
 }
 
 main li:nth-child(3) {
-    background-color: #48567b;
+  background-color: #48567b;
 }
 
 /* Error Animation */
 main.error {
-    animation: errorEffect 0.3s linear 1;
+  animation: errorEffect 0.3s linear 1;
 }
 
 @keyframes errorEffect {
-    0% {
-        transform: translate(10px, 5px);
-    }
-    25% {
-        transform: translate(-5px, 0);
-    }
-    50% {
-        transform: translate(8px, 2px);
-    }
-    100% {
-        transform: translate(-2px, 5px);
-    }
+  0% {
+    transform: translate(10px, 5px);
+  }
+  25% {
+    transform: translate(-5px, 0);
+  }
+  50% {
+    transform: translate(8px, 2px);
+  }
+  100% {
+    transform: translate(-2px, 5px);
+  }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    main {
-        width: 95%;
-    }
+  body {
+    padding: 10px; /* Adjust padding for tablets */
+    flex-direction: column; /* Stack elements */
+  }
 
-    main form {
-        width: 100%;
-    }
+  main {
+    width: 95%;
+    padding: 15px;
+  }
 
-    main form input {
-        width: 75%;
-    }
+  main form {
+    width: 100%;
+  }
 
-    main .temp,
-    main sup {
-        font-size: 2.5rem;
-    }
+  main form input {
+    width: 75%;
+  }
 
-    main li {
-        padding: 8px;
-    }
+  main .temp,
+  main sup {
+    font-size: 2.5rem;
+  }
 
-    main li i {
-        font-size: 2rem;
-    }
+  main li {
+    padding: 8px;
+  }
 
-    main .temp p {
-        font-size: 20px;
-    }
+  main li i {
+    font-size: 2rem;
+  }
+
+  main .temp p {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 480px) {
-    main {
-        padding: 15px;
-    }
+  body {
+    padding: 5px;
+    align-items: flex-start; /* Align content for better readability */
+  }
 
-    main form {
-        flex-direction: row;
-        width: 100%;
-    }
+  main {
+    width: 100%;
+    max-width: 350px;
+    padding: 15px;
+  }
 
-    main form input {
-        width: 80%;
-        padding: 8px;
-    }
+  main form {
+    flex-direction: row;
+    width: 100%;
+  }
 
-    main form button {
-        width: 20%;
-    }
+  main form input {
+    width: 80%;
+    padding: 8px;
+  }
 
-    main .temp,
-    main sup {
-        font-size: 2rem;
-    }
+  main form button {
+    width: 20%;
+  }
 
-    main li {
-        padding: 5px;
-    }
+  main .temp,
+  main sup {
+    font-size: 2rem;
+  }
 
-    main li i {
-        font-size: 1.8rem;
-    }
+  main li {
+    padding: 5px;
+  }
 
-    main .temp p {
-        font-size: 18px;
-    }
+  main li i {
+    font-size: 1.8rem;
+  }
+
+  main .temp p {
+    font-size: 18px;
+  }
 }
-
