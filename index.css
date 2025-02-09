@@ -38,6 +38,7 @@ main form {
   width: 100%;
   max-width: 100%;
   padding: 5px;
+  background: white;
 }
 
 /* Input & Button */
@@ -97,10 +98,6 @@ main sup {
   padding-top: 10px;
 }
 
-main .description .temp {
-  padding: 5px 0 80px;
-}
-
 /* Weather Data Cards */
 main ul {
   list-style: none;
@@ -158,80 +155,53 @@ main.error {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  body {
-    padding: 10px; /* Adjust padding for tablets */
-    flex-direction: column; /* Stack elements */
-  }
-
-  main {
-    width: 95%;
-    padding: 15px;
-  }
-
-  main form {
-    width: 100%;
-  }
-
-  main form input {
-    width: 75%;
-  }
-
-  main .temp,
-  main sup {
-    font-size: 2.5rem;
-  }
-
-  main li {
-    padding: 8px;
-  }
-
-  main li i {
-    font-size: 2rem;
-  }
-
-  main .temp p {
-    font-size: 20px;
-  }
-}
-
 @media (max-width: 480px) {
+  /* Remove body background and padding */
   body {
-    padding: 5px;
-    align-items: flex-start; /* Align content for better readability */
+    background: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
   }
 
+  /* Keep main form and cards fully styled */
   main {
     width: 100%;
     max-width: 350px;
     padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background: white;
+    border-radius: 20px;
   }
 
   main form {
-    flex-direction: row;
     width: 100%;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   }
 
-  main form input {
-    width: 80%;
+  main ul {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Adjust card layout for small screens */
+  }
+
+  main li {
     padding: 8px;
   }
 
-  main form button {
-    width: 20%;
+  main li i {
+    font-size: 2rem;
   }
 
   main .temp,
   main sup {
     font-size: 2rem;
-  }
-
-  main li {
-    padding: 5px;
-  }
-
-  main li i {
-    font-size: 1.8rem;
   }
 
   main .temp p {
